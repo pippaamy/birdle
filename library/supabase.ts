@@ -6,7 +6,11 @@ import "react-native-url-polyfill/auto";
 import * as SecureStore from "expo-secure-store";
 import * as aesjs from "aes-js";
 import "react-native-get-random-values";
-import Config from "react-native-config";
+// import Config from "react-native-config";
+import dotenv from "dotenv"
+import Config from "../config";
+
+// dotenv.config({})
 
 
 
@@ -67,8 +71,7 @@ class LargeSecureStore {
     await AsyncStorage.setItem(key, encrypted);
   }
 }
-
-const supabaseUrl = "https://avxdtyzhgcopxeceojov.supabase.co"
+const supabaseUrl = Config.PROJECT_URL
 const supabaseAnonKey = Config.SUPABASE_API_KEY
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
