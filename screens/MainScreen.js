@@ -2,7 +2,7 @@ import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import HomeScreen from "./HomeScreen";
+import Camera from "./Camera";
 import Gallery from "./Gallery";
 import FriendScreen from "./FriendScreen";
 import User from "./User";
@@ -51,8 +51,8 @@ export default function MainScreen(headerOptions) {
         }}
       />
       <Tab.Screen
-        name="Home"
-        component={HomeScreen}
+        name="Camera"
+        component={Camera}
         options={{
           ...headerOptions,
           tabBarIcon: () => (

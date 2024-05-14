@@ -6,6 +6,10 @@ import "react-native-url-polyfill/auto";
 import * as SecureStore from "expo-secure-store";
 import * as aesjs from "aes-js";
 import "react-native-get-random-values";
+import Config from "react-native-config";
+
+
+
 
 // As Expo's SecureStore does not support values larger than 2048
 // bytes, an AES-256 key is generated and stored in SecureStore, while
@@ -64,8 +68,8 @@ class LargeSecureStore {
   }
 }
 
-const supabaseUrl = process.env.PROJECT_URL;
-const supabaseAnonKey = process.env.SUPABASE_API;
+const supabaseUrl = "https://avxdtyzhgcopxeceojov.supabase.co"
+const supabaseAnonKey = Config.SUPABASE_API_KEY
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {

@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function HomeScreen() {
+export default function Camera() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Login or create account</Text>
+      <Text style={styles.text}>Say Cheese</Text>
     </View>
   );
 }
